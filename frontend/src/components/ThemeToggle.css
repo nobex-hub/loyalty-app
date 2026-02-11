@@ -1,0 +1,129 @@
+/* Theme Toggle Component */
+.theme-toggle {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-track {
+  width: 52px;
+  height: 28px;
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  position: relative;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.theme-toggle:hover .theme-toggle-track {
+  border-color: var(--brand-primary);
+}
+
+.theme-toggle-thumb {
+  width: 22px;
+  height: 22px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-on-brand);
+  transition: transform var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* Light mode - thumb on left */
+:root[data-theme="light"] .theme-toggle-thumb {
+  transform: translateX(0);
+}
+
+/* Dark mode - thumb on right */
+:root[data-theme="dark"] .theme-toggle-thumb {
+  transform: translateX(24px);
+}
+
+/* Icon animation */
+.theme-toggle-thumb svg {
+  animation: rotateIn var(--transition-base) ease-out;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Compact version */
+.theme-toggle.compact .theme-toggle-track {
+  width: 44px;
+  height: 24px;
+}
+
+.theme-toggle.compact .theme-toggle-thumb {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle.compact .theme-toggle-thumb svg {
+  width: 12px;
+  height: 12px;
+}
+
+:root[data-theme="dark"] .theme-toggle.compact .theme-toggle-thumb {
+  transform: translateX(20px);
+}
+
+/* Icon-only version (for mobile) */
+.theme-toggle.icon-only {
+  padding: var(--space-2);
+}
+
+.theme-toggle.icon-only .theme-toggle-track {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle.icon-only .theme-toggle-thumb {
+  position: static;
+  transform: none !important;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.theme-toggle.icon-only .theme-toggle-thumb svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-primary);
+}
+
+.theme-toggle.icon-only:hover .theme-toggle-track {
+  background: var(--bg-tertiary);
+}

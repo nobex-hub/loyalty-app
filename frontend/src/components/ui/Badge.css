@@ -1,0 +1,184 @@
+/* Base Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+/* Badge Variants */
+.badge-default {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.badge-primary {
+  background: var(--brand-primary);
+  color: var(--text-on-brand);
+}
+
+.badge-secondary {
+  background: var(--brand-secondary);
+  color: var(--text-on-brand);
+}
+
+.badge-success {
+  background: var(--success);
+  color: white;
+}
+
+.badge-error {
+  background: var(--error);
+  color: white;
+}
+
+.badge-warning {
+  background: var(--warning);
+  color: var(--text-primary);
+}
+
+.badge-info {
+  background: var(--info);
+  color: white;
+}
+
+.badge-gradient {
+  background: var(--gradient-primary);
+  color: var(--text-on-brand);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Dark mode glow for gradient badge */
+:root[data-theme="dark"] .badge-gradient {
+  box-shadow: var(--shadow-sm), var(--glow-teal);
+}
+
+/* Outline Variants */
+.badge-outline-default {
+  background: transparent;
+  border: 2px solid var(--border-medium);
+  color: var(--text-primary);
+}
+
+.badge-outline-primary {
+  background: transparent;
+  border: 2px solid var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.badge-outline-success {
+  background: transparent;
+  border: 2px solid var(--success);
+  color: var(--success);
+}
+
+.badge-outline-error {
+  background: transparent;
+  border: 2px solid var(--error);
+  color: var(--error);
+}
+
+/* Subtle Variants (with light background) */
+.badge-subtle-success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+
+.badge-subtle-error {
+  background: var(--error-bg);
+  color: var(--error);
+  border: 1px solid var(--error-border);
+}
+
+.badge-subtle-warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+
+.badge-subtle-info {
+  background: var(--info-bg);
+  color: var(--info);
+  border: 1px solid var(--info-border);
+}
+
+/* Badge Sizes */
+.badge-sm {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.badge-md {
+  padding: calc(var(--space-1) + 2px) var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.badge-lg {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-base);
+}
+
+/* Rounded Badge (pill) */
+.badge-rounded {
+  border-radius: var(--radius-full);
+}
+
+/* Badge Icon */
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.badge-md .badge-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.badge-lg .badge-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Dot Badge (notification dot) */
+.badge-dot {
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+.badge-dot .badge-text {
+  display: none;
+}
+
+/* Points Badge (special styling for points display) */
+.badge-points {
+  background: var(--gradient-primary);
+  color: var(--text-on-brand);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  box-shadow: var(--shadow-colored);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+:root[data-theme="dark"] .badge-points {
+  box-shadow: var(--shadow-colored), var(--glow-teal);
+}
+
+.badge-points .badge-icon {
+  font-size: 1.2em;
+}

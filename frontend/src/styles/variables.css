@@ -1,0 +1,235 @@
+/* ============================================
+   LOYALTY APP - CSS VARIABLES
+   Design System Implementation
+   Light Mode: #F6FB7A → #B4E380 → #88D66C → #73BBA3
+   Dark Mode:  #13005A → #00337C → #1C82AD → #21E6C1
+   ============================================ */
+
+/* ===== COLOR PALETTE ===== */
+:root {
+  /* Light palette */
+  --color-yellow-lime: #F6FB7A;  /* Bright Yellow-Lime */
+  --color-light-green: #B4E380;  /* Light Green */
+  --color-green: #88D66C;        /* Medium Green */
+  --color-teal-sage: #73BBA3;    /* Teal Sage */
+  /* Dark palette */
+  --color-purple: #13005A;       /* Deep Purple */
+  --color-dark-blue: #00337C;    /* Dark Blue */
+  --color-blue: #1C82AD;         /* Medium Blue */
+  --color-teal: #21E6C1;         /* Bright Teal/Cyan */
+}
+
+/* ===== LIGHT MODE (Default) ===== */
+:root,
+:root[data-theme="light"] {
+  /* Backgrounds - Clean whites with green tint */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F7FAF5;
+  --bg-tertiary: #EDF5E8;
+  --bg-elevated: #FFFFFF;
+  --bg-card: #FFFFFF;
+
+  /* Text - Dark greens for readability */
+  --text-primary: #1A2E1A;
+  --text-secondary: #2D4A3E;
+  --text-tertiary: #6B8278;
+  --text-inverse: #FFFFFF;
+  --text-on-brand: #1A2E1A;
+
+  /* Brand - Green palette */
+  --brand-primary: #73BBA3;      /* Teal sage - links, headers */
+  --brand-secondary: #88D66C;    /* Medium green - action buttons */
+  --brand-accent: #B4E380;       /* Light green - accents */
+  --brand-hover: #5FA88F;        /* Darker teal for hover */
+
+  /* Brand gradients */
+  --gradient-primary: linear-gradient(135deg, #73BBA3 0%, #88D66C 100%);
+  --gradient-subtle: linear-gradient(135deg, #EDF5E8 0%, #D9EDCC 100%);
+  --gradient-full: linear-gradient(135deg, #73BBA3 0%, #88D66C 33%, #B4E380 66%, #F6FB7A 100%);
+
+  /* Borders & Dividers */
+  --border-light: #DDE8D6;
+  --border-medium: #BDD1B5;
+  --border-dark: #8DAF82;
+
+  /* Shadows - Green-tinted */
+  --shadow-sm: 0 1px 3px rgba(115, 187, 163, 0.10);
+  --shadow-md: 0 4px 12px rgba(115, 187, 163, 0.14);
+  --shadow-lg: 0 10px 24px rgba(115, 187, 163, 0.18);
+  --shadow-xl: 0 20px 40px rgba(115, 187, 163, 0.20);
+  --shadow-colored: 0 8px 16px rgba(136, 214, 108, 0.25);
+
+  /* Semantic Colors */
+  --success: #88D66C;
+  --success-bg: #E8F5E0;
+  --success-border: #B4E380;
+  --error: #EF4444;
+  --error-bg: #FEE2E2;
+  --error-border: #FCA5A5;
+  --warning: #F59E0B;
+  --warning-bg: #FEF3C7;
+  --warning-border: #FCD34D;
+  --info: #73BBA3;
+  --info-bg: #E0F2EC;
+  --info-border: #A3D9C8;
+
+  /* Special effects */
+  --glow-teal: 0 0 10px rgba(115, 187, 163, 0.20);
+  --glow-blue: 0 0 10px rgba(136, 214, 108, 0.20);
+
+  /* Decorative / hardcoded-replacement vars */
+  --focus-ring: rgba(115, 187, 163, 0.15);
+  --glow-color-a: rgba(115, 187, 163, 0.2);
+  --glow-color-b: rgba(136, 214, 108, 0.15);
+  --scan-btn-text: #1A2E1A;
+  --scan-btn-shadow: rgba(136, 214, 108, 0.25);
+  --scan-btn-shadow-hover: rgba(136, 214, 108, 0.35);
+}
+
+/* ===== DARK MODE ===== */
+:root[data-theme="dark"] {
+  /* Backgrounds - Deep purple to dark blue gradient */
+  --bg-primary: #0A0025;         /* Very dark purple */
+  --bg-secondary: #13005A;       /* Deep purple */
+  --bg-tertiary: #00337C;        /* Dark blue */
+  --bg-elevated: #1A0A4E;        /* Slightly lighter purple */
+  --bg-card: #13005A;            /* Deep purple for cards */
+
+  /* Text - High contrast and readable */
+  --text-primary: #FFFFFF;
+  --text-secondary: #D4E1F0;
+  --text-tertiary: #8BA3C0;
+  --text-inverse: #0A0025;
+  --text-on-brand: #FFFFFF;
+
+  /* Brand - Bright blue and teal for visibility */
+  --brand-primary: #1C82AD;      /* Medium blue */
+  --brand-secondary: #21E6C1;    /* Bright teal/cyan */
+  --brand-accent: #5BA8CE;       /* Lighter blue */
+  --brand-hover: #2A98C6;        /* Brighter blue for hover */
+
+  /* Brand gradients - Full spectrum */
+  --gradient-primary: linear-gradient(135deg, #1C82AD 0%, #21E6C1 100%);
+  --gradient-subtle: linear-gradient(135deg, #13005A 0%, #00337C 100%);
+  --gradient-full: linear-gradient(135deg, #13005A 0%, #00337C 25%, #1C82AD 50%, #21E6C1 100%);
+
+  /* Borders & Dividers - Visible in dark */
+  --border-light: #1E0A5C;
+  --border-medium: #00337C;
+  --border-dark: #1C82AD;
+
+  /* Shadows - Deep and dramatic with color */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.8);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.9);
+  --shadow-colored: 0 8px 16px rgba(28, 130, 173, 0.5);
+
+  /* Semantic Colors - Bright and visible in dark */
+  --success: #21E6C1;
+  --success-bg: #00337C44;
+  --success-border: #21E6C166;
+  --error: #FF6B6B;
+  --error-bg: #FF6B6B1A;
+  --error-border: #FF6B6B66;
+  --warning: #FFD93D;
+  --warning-bg: #FFD93D1A;
+  --warning-border: #FFD93D66;
+  --info: #1C82AD;
+  --info-bg: #1C82AD33;
+  --info-border: #1C82AD66;
+
+  /* Special dark mode enhancements - Glow effects */
+  --glow-teal: 0 0 20px rgba(33, 230, 193, 0.4);
+  --glow-blue: 0 0 20px rgba(28, 130, 173, 0.4);
+
+  /* Decorative / hardcoded-replacement vars */
+  --focus-ring: rgba(28, 130, 173, 0.15);
+  --glow-color-a: rgba(28, 130, 173, 0.2);
+  --glow-color-b: rgba(33, 230, 193, 0.15);
+  --scan-btn-text: #0A0025;
+  --scan-btn-shadow: rgba(33, 230, 193, 0.25);
+  --scan-btn-shadow-hover: rgba(33, 230, 193, 0.35);
+}
+
+/* ===== SPACING SCALE ===== */
+:root {
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+}
+
+/* ===== BORDER RADIUS ===== */
+:root {
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+:root {
+  /* Font Families */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+}
+
+/* ===== TRANSITIONS ===== */
+:root {
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Z-INDEX SCALE ===== */
+:root {
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-fixed: 1200;
+  --z-modal-backdrop: 1300;
+  --z-modal: 1400;
+  --z-popover: 1500;
+  --z-tooltip: 1600;
+  --z-toast: 9999;
+}
+
+/* ===== MAX WIDTHS ===== */
+:root {
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+}

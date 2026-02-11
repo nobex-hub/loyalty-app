@@ -1,0 +1,291 @@
+/* ============================================
+   ADMIN PANEL - CSS VARIABLES
+   Design System Implementation
+   Light Mode: #F6FB7A -> #B4E380 -> #88D66C -> #73BBA3
+   Dark Mode:  #13005A -> #00337C -> #1C82AD -> #21E6C1
+   ============================================ */
+
+/* ===== LIGHT MODE (Default) ===== */
+:root,
+:root[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F7FAF5;
+  --bg-tertiary: #EDF5E8;
+  --bg-page: #F3F6F0;
+  --bg-elevated: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: linear-gradient(180deg, #1A2E1A 0%, #2D4A3E 100%);
+
+  /* Text */
+  --text-primary: #1A2E1A;
+  --text-secondary: #2D4A3E;
+  --text-tertiary: #6B8278;
+  --text-inverse: #FFFFFF;
+  --text-on-brand: #1A2E1A;
+
+  /* Brand */
+  --brand-primary: #73BBA3;
+  --brand-secondary: #88D66C;
+  --brand-accent: #B4E380;
+  --brand-highlight: #F6FB7A;
+  --brand-hover: #5FA88F;
+
+  /* Brand gradients */
+  --gradient-primary: linear-gradient(135deg, #73BBA3 0%, #88D66C 100%);
+  --gradient-subtle: linear-gradient(135deg, #EDF5E8 0%, #D9EDCC 100%);
+  --gradient-full: linear-gradient(135deg, #73BBA3 0%, #88D66C 33%, #B4E380 66%, #F6FB7A 100%);
+  --gradient-sidebar-logo: linear-gradient(135deg, #88D66C, #F6FB7A);
+
+  /* Borders */
+  --border-light: #DDE8D6;
+  --border-medium: #BDD1B5;
+  --border-dark: #8DAF82;
+  --border-card: #E8F0E3;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(115, 187, 163, 0.10);
+  --shadow-md: 0 4px 12px rgba(115, 187, 163, 0.14);
+  --shadow-lg: 0 10px 24px rgba(115, 187, 163, 0.18);
+  --shadow-xl: 0 20px 40px rgba(115, 187, 163, 0.20);
+  --shadow-colored: 0 2px 8px rgba(136, 214, 108, 0.25);
+  --shadow-colored-hover: 0 4px 16px rgba(136, 214, 108, 0.35);
+  --shadow-card: 0 1px 4px rgba(115, 187, 163, 0.08);
+  --shadow-card-hover: 0 4px 16px rgba(115, 187, 163, 0.12);
+
+  /* Semantic Colors */
+  --success: #88D66C;
+  --success-bg: #E8F5E0;
+  --success-text: #2D7A3A;
+  --success-border: #B4E380;
+  --error: #EF4444;
+  --error-bg: #FEE2E2;
+  --error-text: #DC2626;
+  --error-border: #FCA5A5;
+  --warning: #F59E0B;
+  --warning-bg: #FEF3C7;
+  --warning-text: #B45309;
+  --warning-border: #FCD34D;
+  --info: #73BBA3;
+  --info-bg: #E0F2EC;
+  --info-text: #2D6A5A;
+  --info-border: #A3D9C8;
+
+  /* Auth page */
+  --auth-card-bg: white;
+  --auth-card-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  --auth-glow-a: rgba(115, 187, 163, 0.3);
+  --auth-glow-b: rgba(136, 214, 108, 0.2);
+
+  /* Form */
+  --input-bg: #F7FAF5;
+  --input-bg-focus: #FFFFFF;
+  --input-border: #BDD1B5;
+  --input-focus-ring: rgba(115, 187, 163, 0.15);
+
+  /* Sidebar navigation */
+  --nav-link-color: rgba(255, 255, 255, 0.6);
+  --nav-link-hover-bg: rgba(255, 255, 255, 0.06);
+  --nav-link-hover-color: rgba(255, 255, 255, 0.9);
+  --nav-active-bg: rgba(136, 214, 108, 0.08);
+  --nav-active-color: #88D66C;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+
+  /* Button secondary */
+  --btn-secondary-bg: #EDF5E8;
+  --btn-secondary-color: #2D4A3E;
+  --btn-secondary-border: #DDE8D6;
+  --btn-secondary-hover-bg: #D9EDCC;
+  --btn-secondary-hover-border: #B4E380;
+
+  /* Table */
+  --table-header-bg: #F7FAF5;
+  --table-row-hover: #F7FAF5;
+  --table-border: #F0F5EC;
+
+  /* Code inline */
+  --code-bg: #EDF5E8;
+  --code-color: #2D4A3E;
+  --code-border: #DDE8D6;
+
+  /* Review tabs */
+  --tab-bg: white;
+  --tab-border: #DDE8D6;
+  --tab-color: #6B8278;
+  --tab-hover-border: #B4E380;
+  --tab-hover-color: #2D4A3E;
+  --tab-active-bg: #EDF5E8;
+  --tab-active-border: #88D66C;
+  --tab-active-color: #2D7A3A;
+
+  /* Review card */
+  --review-border-pending: #F59E0B;
+  --review-border-approved: #88D66C;
+  --review-border-rejected: #EF4444;
+
+  /* Modal */
+  --modal-overlay: rgba(0, 0, 0, 0.4);
+  --modal-bg: white;
+  --modal-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  /* Logout */
+  --logout-bg: rgba(255, 255, 255, 0.06);
+  --logout-color: rgba(255, 255, 255, 0.7);
+  --logout-border: rgba(255, 255, 255, 0.08);
+
+  /* Charts */
+  --chart-grid: #E8F0E3;
+  --chart-color-1: #73BBA3;
+  --chart-color-2: #88D66C;
+  --chart-color-3: #B4E380;
+  --chart-color-4: #F6FB7A;
+  --chart-color-5: #A3D9C8;
+  --chart-color-6: #5FA88F;
+  --chart-color-7: #D9EDCC;
+
+  /* Empty state */
+  --empty-color: #A0B8A8;
+}
+
+/* ===== DARK MODE ===== */
+:root[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary: #0A0025;
+  --bg-secondary: #13005A;
+  --bg-tertiary: #00337C;
+  --bg-page: #080020;
+  --bg-elevated: #1A0A4E;
+  --bg-card: #13005A;
+  --bg-sidebar: linear-gradient(180deg, #0A0025 0%, #13005A 100%);
+
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #D4E1F0;
+  --text-tertiary: #8BA3C0;
+  --text-inverse: #0A0025;
+  --text-on-brand: #FFFFFF;
+
+  /* Brand */
+  --brand-primary: #1C82AD;
+  --brand-secondary: #21E6C1;
+  --brand-accent: #5BA8CE;
+  --brand-highlight: #21E6C1;
+  --brand-hover: #2A98C6;
+
+  /* Brand gradients */
+  --gradient-primary: linear-gradient(135deg, #1C82AD 0%, #21E6C1 100%);
+  --gradient-subtle: linear-gradient(135deg, #13005A 0%, #00337C 100%);
+  --gradient-full: linear-gradient(135deg, #13005A 0%, #00337C 25%, #1C82AD 50%, #21E6C1 100%);
+  --gradient-sidebar-logo: linear-gradient(135deg, #1C82AD, #21E6C1);
+
+  /* Borders */
+  --border-light: #1E0A5C;
+  --border-medium: #00337C;
+  --border-dark: #1C82AD;
+  --border-card: #1E0A5C;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.8);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.9);
+  --shadow-colored: 0 2px 8px rgba(28, 130, 173, 0.4);
+  --shadow-colored-hover: 0 4px 16px rgba(28, 130, 173, 0.5);
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 16px rgba(28, 130, 173, 0.3);
+
+  /* Semantic Colors */
+  --success: #21E6C1;
+  --success-bg: rgba(33, 230, 193, 0.1);
+  --success-text: #21E6C1;
+  --success-border: rgba(33, 230, 193, 0.3);
+  --error: #FF6B6B;
+  --error-bg: rgba(255, 107, 107, 0.1);
+  --error-text: #FF6B6B;
+  --error-border: rgba(255, 107, 107, 0.3);
+  --warning: #FFD93D;
+  --warning-bg: rgba(255, 217, 61, 0.1);
+  --warning-text: #FFD93D;
+  --warning-border: rgba(255, 217, 61, 0.3);
+  --info: #1C82AD;
+  --info-bg: rgba(28, 130, 173, 0.15);
+  --info-text: #5BA8CE;
+  --info-border: rgba(28, 130, 173, 0.3);
+
+  /* Auth page */
+  --auth-card-bg: #13005A;
+  --auth-card-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --auth-glow-a: rgba(28, 130, 173, 0.3);
+  --auth-glow-b: rgba(33, 230, 193, 0.2);
+
+  /* Form */
+  --input-bg: #1A0A4E;
+  --input-bg-focus: #0A0025;
+  --input-border: #00337C;
+  --input-focus-ring: rgba(28, 130, 173, 0.25);
+
+  /* Sidebar navigation */
+  --nav-link-color: rgba(255, 255, 255, 0.5);
+  --nav-link-hover-bg: rgba(255, 255, 255, 0.06);
+  --nav-link-hover-color: rgba(255, 255, 255, 0.9);
+  --nav-active-bg: rgba(33, 230, 193, 0.08);
+  --nav-active-color: #21E6C1;
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --sidebar-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+
+  /* Button secondary */
+  --btn-secondary-bg: #1A0A4E;
+  --btn-secondary-color: #D4E1F0;
+  --btn-secondary-border: #00337C;
+  --btn-secondary-hover-bg: #00337C;
+  --btn-secondary-hover-border: #1C82AD;
+
+  /* Table */
+  --table-header-bg: #1A0A4E;
+  --table-row-hover: #1A0A4E;
+  --table-border: #1E0A5C;
+
+  /* Code inline */
+  --code-bg: #1A0A4E;
+  --code-color: #D4E1F0;
+  --code-border: #00337C;
+
+  /* Review tabs */
+  --tab-bg: #13005A;
+  --tab-border: #00337C;
+  --tab-color: #8BA3C0;
+  --tab-hover-border: #1C82AD;
+  --tab-hover-color: #D4E1F0;
+  --tab-active-bg: rgba(28, 130, 173, 0.15);
+  --tab-active-border: #21E6C1;
+  --tab-active-color: #21E6C1;
+
+  /* Review card */
+  --review-border-pending: #FFD93D;
+  --review-border-approved: #21E6C1;
+  --review-border-rejected: #FF6B6B;
+
+  /* Modal */
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --modal-bg: #13005A;
+  --modal-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  /* Logout */
+  --logout-bg: rgba(255, 255, 255, 0.04);
+  --logout-color: rgba(255, 255, 255, 0.6);
+  --logout-border: rgba(255, 255, 255, 0.06);
+
+  /* Charts */
+  --chart-grid: #1E0A5C;
+  --chart-color-1: #1C82AD;
+  --chart-color-2: #21E6C1;
+  --chart-color-3: #5BA8CE;
+  --chart-color-4: #00337C;
+  --chart-color-5: #2A98C6;
+  --chart-color-6: #13005A;
+  --chart-color-7: #1E0A5C;
+
+  /* Empty state */
+  --empty-color: #5A6E8A;
+}

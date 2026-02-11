@@ -1,0 +1,75 @@
+/* Theme Toggle Component - Admin */
+.theme-toggle {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 10px;
+  transition: background-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-track {
+  width: 48px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  position: relative;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.theme-toggle:hover .theme-toggle-track {
+  border-color: var(--brand-secondary);
+}
+
+.theme-toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--gradient-primary);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-inverse);
+  transition: transform 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Light mode - thumb on left */
+:root[data-theme="light"] .theme-toggle-thumb {
+  transform: translateX(0);
+}
+
+/* Dark mode - thumb on right */
+:root[data-theme="dark"] .theme-toggle-thumb {
+  transform: translateX(22px);
+}
+
+/* Icon animation */
+.theme-toggle-thumb svg {
+  animation: rotateIn 0.25s ease-out;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
